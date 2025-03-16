@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="user">
+        <div id="user-info">
+          <img src="images/image-jeremy.png" alt="Jeremy Robson" />
+          <div class="text">
+            <span>Report for</span>
+            <h1>Jeremy Robson</h1>
+          </div>
+        </div>
+        <div id="time-tracking-options">
+          <button class="option" id="daily" data-option="daily">Daily</button>
+          <button class="option" id="weekly" data-option="weekly">Weekly</button>
+          <button class="option" id="monthly" data-option="monthly">Monthly</button>
+        </div>
+      </div>
+
+      <div id="trackers">
+        <div class="time-tracker" id="work-time-tracker" data-category="Work">
+          <div class="data">
+            <div class="label">
+              <h2>Work</h2>
+              <img src="images/icon-ellipsis.svg" alt="Options" />
+            </div>
+            <div class="time">
+              <span class="hours"></span>
+              <span class="previous-hours"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="time-tracker" id="play-time-tracker" data-category="Play">
+          <div class="data">
+            <div class="label">
+              <h2>Play</h2>
+              <img src="images/icon-ellipsis.svg" alt="Options" />
+            </div>
+            <div class="time">
+              <span class="hours"></span>
+              <span class="previous-hours"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="time-tracker" id="study-time-tracker" data-category="Study">
+          <div class="data">
+            <div class="label">
+              <h2>Study</h2>
+              <img src="images/icon-ellipsis.svg" alt="Options" />
+            </div>
+            <div class="time">
+              <span class="hours"></span>
+              <span class="previous-hours"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="time-tracker" id="exercise-time-tracker" data-category="Exercise">
+          <div class="data">
+            <div class="label">
+              <h2>Exercise</h2>
+              <img src="images/icon-ellipsis.svg" alt="Options" />
+            </div>
+            <div class="time">
+              <span class="hours"></span>
+              <span class="previous-hours"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="time-tracker" id="social-time-tracker" data-category="Social">
+          <div class="data">
+            <div class="label">
+              <h2>Social</h2>
+              <img src="images/icon-ellipsis.svg" alt="Options" />
+            </div>
+            <div class="time">
+              <span class="hours"></span>
+              <span class="previous-hours"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="time-tracker" id="self-care-time-tracker" data-category="Self Care">
+          <div class="data">
+            <div class="label">
+              <h2>Self Care</h2>
+              <img src="images/icon-ellipsis.svg" alt="Options" />
+            </div>
+            <div class="time">
+              <span class="hours"></span>
+              <span class="previous-hours"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded with 💜 by <a href="https://github.com/ayman-soliman-1783">Ayman Soliman</a>.
+      </div>
+    </div>
+
+  </body>
+</html>
