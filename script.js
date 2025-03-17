@@ -5,7 +5,8 @@ let optionType;
 
 // Initial load
 document.addEventListener("DOMContentLoaded", () => {
-  timeTrackingOptions[1].click();
+  weeklyTimeTrackersOption = document.querySelector("[data-option=weekly]");
+  weeklyTimeTrackersOption.click();
 });
 
 // Attach event listeners to tracking options
@@ -38,13 +39,14 @@ async function updateTimeTrackers(optionType) {
         categoryData.timeframes?.[optionType]?.current || 0;
       const previousHours =
         categoryData.timeframes?.[optionType]?.previous || 0;
+      const previousPeriod = optionType === "weekly" ? "Last Week": optionType === "daily" ? "Yesterday": "Last Month";
 
       tracker.querySelector(
         ".time span.hours"
       ).textContent = `${currentHours}hrs`;
       tracker.querySelector(
         ".time span.previous-hours"
-      ).textContent = `Last ${(optionType === "daily" ? "Day": "weekly"? "Week": "Month")} - ${previousHours}hrs`;
+      ).textContent = `${previousPeriod} - ${previousHours}hrs`;
     });
   } catch (error) {
     console.error("Error fetching time tracking data:", error);
